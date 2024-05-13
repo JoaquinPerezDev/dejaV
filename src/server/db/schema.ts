@@ -3,9 +3,11 @@
 
 import { sql } from "drizzle-orm";
 import {
+  boolean,
   index,
   pgTableCreator,
   serial,
+  text,
   timestamp,
   varchar,
 } from "drizzle-orm/pg-core";
@@ -18,8 +20,8 @@ import {
  */
 export const createTable = pgTableCreator((name) => `dejav_${name}`);
 
-export const posts = createTable(
-  "post",
+export const reminder = createTable(
+  "reminder",
   {
     id: serial("id").primaryKey(),
     name: varchar("name", { length: 256 }),
@@ -27,8 +29,11 @@ export const posts = createTable(
       .default(sql`CURRENT_TIMESTAMP`)
       .notNull(),
     updatedAt: timestamp("updatedAt", { withTimezone: true }),
+    remindAt: timestamp("reminder_at", { withTimezone: true }).notNull(),
+    recurring: boolean("recurring"),
+    notes: text("text"),
   },
   (example) => ({
     nameIndex: index("name_idx").on(example.name),
-  })
+  }),
 );
