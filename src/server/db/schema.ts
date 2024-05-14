@@ -29,7 +29,7 @@ export const reminder = createTable(
       .default(sql`CURRENT_TIMESTAMP`)
       .notNull(),
     updatedAt: timestamp("updatedAt", { withTimezone: true }),
-    remindAt: timestamp("reminder_at", { withTimezone: true }).notNull(),
+    remindAt: timestamp("reminder_at", { withTimezone: true }),
     recurring: boolean("recurring"),
     notes: text("text"),
   },

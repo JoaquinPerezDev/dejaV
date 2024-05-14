@@ -1,7 +1,10 @@
 export default function HomePage() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-center bg-gradient-to-b from-[#2e026d] to-[#15162c] text-white">
-      This is DejaV
+    <main className="">
+      <div className="flex justify-center">Nav Bar</div>
+      <div className="gap 4 flex flex-wrap justify-center align-middle">
+        Notes from DB
+      </div>
     </main>
   );
 }
