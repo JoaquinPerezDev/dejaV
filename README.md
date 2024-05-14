@@ -5,6 +5,7 @@
 - [x] make it deploy (vercel)
 - [x] Scaffold basic UI with mock data
 - [x] Add Nav Bar(Include app name + sign in/user avatar)
+- [ ] Clean up build process
 - [x] Set up database(vercel postgres)
 - [ ] Attach database to UI(Create notes and display them)
 - [ ] Add authentication (w/ Clerk)
