@@ -20,7 +20,7 @@ import {
  */
 export const createTable = pgTableCreator((name) => `dejav_${name}`);
 
-export const reminder = createTable(
+export const notes = createTable(
   "reminder",
   {
     id: serial("id").primaryKey(),
@@ -31,7 +31,7 @@ export const reminder = createTable(
     updatedAt: timestamp("updatedAt", { withTimezone: true }),
     remindAt: timestamp("reminder_at", { withTimezone: true }),
     recurring: boolean("recurring"),
-    notes: text("text"),
+    text: text("text"),
   },
   (example) => ({
     nameIndex: index("name_idx").on(example.name),
