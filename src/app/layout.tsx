@@ -1,6 +1,8 @@
 import "~/styles/globals.css";
 
 import { GeistSans } from "geist/font/sans";
+import TopNav from "./_components/topnav";
+import { ThemeProvider } from "./_components/theme-prodivder";
 
 export const metadata = {
   title: "Create T3 App",
@@ -8,14 +10,6 @@ export const metadata = {
   icons: [{ rel: "icon", url: "/favicon.ico" }],
 };
 
-function TopNav() {
-  return (
-    <nav className="flex w-full items-center justify-between border-b p-4 text-2xl font-semibold">
-      <div>Echo</div>
-      <div>Sign In</div>
-    </nav>
-  );
-}
 export default function RootLayout({
   children,
 }: {
@@ -23,9 +17,16 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={`${GeistSans.variable} flex flex-col gap-4 font-sans`}>
-        <TopNav />
-        {children}
+      <body className={`flex flex-col gap-4`}>
+        <ThemeProvider
+          attribute="class"
+          defaultTheme="system"
+          enableSystem
+          disableTransitionOnChange
+        >
+          <TopNav />
+          {children}
+        </ThemeProvider>
       </body>
     </html>
   );
