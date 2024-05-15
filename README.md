@@ -7,7 +7,7 @@
 - [x] Add Nav Bar(Include app name + sign in/user avatar)
 - [x] Clean up build process
 - [x] Set up database(vercel postgres)
-- [ ] Wireframe the pages / components
+- [x] Wireframe the pages / components
 - [ ] Attach database to UI(Create notes and display them)
 - [ ] Add authentication (w/ Clerk)
 - [ ] Add image uploading
