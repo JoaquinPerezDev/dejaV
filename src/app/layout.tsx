@@ -1,6 +1,6 @@
 import { ClerkProvider } from "@clerk/nextjs";
 import TopNav from "./_components/topnav";
-import { ThemeProvider } from "./_components/theme-prodivder";
+import { ThemeProvider } from "./_components/theme-provider";
 
 export const metadata = {
   title: "Echo",
@@ -16,7 +16,7 @@ export default function RootLayout({
   return (
     <ClerkProvider>
       <html lang="en">
-        <body className={`flex flex-col gap-4`}>
+        <body>
           <ThemeProvider
             attribute="class"
             defaultTheme="system"

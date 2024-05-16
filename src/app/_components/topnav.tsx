@@ -5,7 +5,7 @@ export default function TopNav() {
     <nav className="flex w-full items-center justify-between border-b p-4 text-2xl font-semibold">
       <div>Echo</div>
 
-      <div>
+      <div className="flex flex-row items-center gap-4">
         <SignedOut>
           <SignInButton />
         </SignedOut>
