@@ -74,7 +74,3 @@
     @apply bg-background text-foreground;
   }
 }
-
-.title {
-  font-size: 3rem;
-}

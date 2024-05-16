@@ -1,11 +1,20 @@
-import { db } from "~/server/db";
+// import { db } from "~/server/db";
+
+import { SignedIn, SignedOut } from "@clerk/nextjs";
 
 export const dynamic = "force-dynamic";
 
 export default async function HomePage() {
   return (
-    <main className="flex flex-wrap">
-      <h1 className="title align-items flex">Welcome to Echo!</h1>
+    <main className="">
+      <SignedOut>
+        <h1 className="h-full w-full text-center text-2xl">Welcome to Echo!</h1>
+      </SignedOut>
+      <SignedIn>
+        <h1 className="h-full w-full text-center text-2xl">
+          Notes / Reminders
+        </h1>
+      </SignedIn>
     </main>
   );
 }
