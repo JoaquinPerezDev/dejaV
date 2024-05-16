@@ -8,7 +8,9 @@ export default async function HomePage() {
   return (
     <main className="">
       <SignedOut>
-        <h1 className="h-full w-full text-center text-2xl">Welcome to Echo!</h1>
+        <div className="h-full w-full text-center text-2xl">
+          Welcome to Echo!
+        </div>
       </SignedOut>
       <SignedIn>
         <h1 className="h-full w-full text-center text-2xl">
